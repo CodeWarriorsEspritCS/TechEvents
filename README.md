@@ -1,4 +1,2 @@
 # TechEvents
-Tech Events is an Esprit school project.
-The main programming language is Java.
-The used database is MySQL.
+Tech Events is an Esprit school project written in Java and uses a MySQL database.
