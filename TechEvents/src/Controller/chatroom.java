@@ -1,7 +1,6 @@
-package services;
+package Controller;
 
 
-import controller.data;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -10,6 +9,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import javafx.fxml.FXML;
 
 /**
  * Created by chrischang on 2017. 1. 17..
@@ -43,6 +43,7 @@ public class chatroom {
         }
     }
 
+    @FXML
     public void onClickSend() {
         try {
             msg = message.getText();
@@ -74,6 +75,7 @@ public class chatroom {
         th.start();
     }
 
+    @FXML
     public void buttonPressed(KeyEvent e)
     {
         if(e.getCode().toString().equals("ENTER"))
