@@ -13,6 +13,9 @@ import java.util.Date;
  */
 public class Utilisateur {
 
+    public Utilisateur() {
+    }
+
     private int idUser;
     private String nom;
     private String prenom;
@@ -34,6 +37,12 @@ public class Utilisateur {
         this.pseudo = pseudo;
         this.pwd = pwd;
         this.role = role;
+    }
+
+    public Utilisateur(int idUser, String nom, String prenom) {
+        this.idUser = idUser;
+        this.nom = nom;
+        this.prenom = prenom;
     }
 
     
