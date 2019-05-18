@@ -28,18 +28,18 @@ public class chatroom {
     public TextField message;
 
     public chatroom() {
-        try {
-            System.out.println(data.ip + data.port + data.name);
-            socket = new Socket(data.ip, data.port);
-            dis = new DataInputStream(socket.getInputStream());
-            dos = new DataOutputStream(socket.getOutputStream());
-            this.name = data.name;
-            dos.writeUTF(name);
-            _receive();
-        } catch(IOException e) {
-            //e.printStackTrace();
-            System.out.println("Error");
-        }
+       // try {
+//            System.out.println(data.ip + data.port + data.name);
+//            socket = new Socket(data.ip, data.port);
+//            dis = new DataInputStream(socket.getInputStream());
+//            dos = new DataOutputStream(socket.getOutputStream());
+//            this.name = data.name;
+//            dos.writeUTF(name);
+//            _receive();
+//        } catch(IOException e) {
+//            //e.printStackTrace();
+//            System.out.println("Error");
+      // }
     }
 
     public void onClickSend() {

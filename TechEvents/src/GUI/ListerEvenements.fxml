@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TilePane layoutY="-1.0" prefHeight="100.0" prefWidth="739.0" style="-fx-background-color: #2a6972;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/techeventsLogo.png" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu Dans Votre Espace" textAlignment="CENTER">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="#e8982d" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="Brush Script MT Italic" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </TilePane>
+      <Pane layoutY="661.0" prefHeight="37.0" prefWidth="739.0" style="-fx-background-color: #2a6972;">
+         <children>
+            <Text fill="#e99b06" layoutX="620.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code">
+               <font>
+                  <Font name="Brush Script MT Italic" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="650.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warriors  2019">
+               <font>
+                  <Font name="Brush Script MT Italic" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TitledPane animated="false" layoutX="40.0" layoutY="126.0" prefHeight="508.0" prefWidth="674.0" text="Lister évènements">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutX="24.0" layoutY="10.0" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TextArea layoutX="38.0" layoutY="5.0" prefHeight="29.0" prefWidth="83.0" />
+                        <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/rechrcher.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TableView layoutX="53.0" layoutY="206.0" prefHeight="409.0" prefWidth="647.0" />
+      <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="609.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/ajouter.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="637.0" layoutY="164.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: #5d9d83;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

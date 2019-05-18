@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="643.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TilePane prefHeight="81.0" prefWidth="770.0" style="-fx-background-color: #2a6972;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/techeventsLogo.png" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu Dans Votre Espace" textAlignment="CENTER">
+               <font>
+                  <Font name="Brush Script MT Italic" size="30.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="#e8982d" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+         </children></TilePane>
+      <VBox layoutX="168.0" layoutY="123.0" prefHeight="220.0" prefWidth="220.0" style="-fx-background-color: #5d9d83;">
+         <children>
+            <ImageView fitHeight="220.0" fitWidth="220.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/evenement.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="406.0" layoutY="121.0" prefHeight="220.0" prefWidth="200.0" style="-fx-background-color: #d3d3d3;">
+         <children>
+            <ImageView fitHeight="220.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Recommendation.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="391.0" layoutY="358.0" prefHeight="220.0" prefWidth="220.0" style="-fx-background-color: #5d9d83;">
+         <children>
+            <ImageView fitHeight="220.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Discussion.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="170.0" layoutY="357.0" prefHeight="220.0" prefWidth="200.0" style="-fx-background-color: #d3d3d3;">
+         <children>
+            <ImageView fitHeight="220.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Reservation.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Pane layoutX="-1.0" layoutY="606.0" prefHeight="38.0" prefWidth="770.0" style="-fx-background-color: #2a6972;">
+         <children>
+            <Text fill="#e99b06" layoutX="649.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code">
+               <font>
+                  <Font name="Brush Script MT Italic" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="677.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warriors  2019">
+               <font>
+                  <Font name="Brush Script MT Italic" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
