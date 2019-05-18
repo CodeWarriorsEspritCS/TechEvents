@@ -1,39 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entities;
-
-import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Linda
  */
-
 public class Recommandation {
 
-    private static final long serialVersionUID = 1L;
-    
     private Integer idRec;
-    
+
     private String description;
-    
-    private int typeRec;
-    
+
+    private int note;
+
     private int evenement;
-    
+
     private int utilisateur;
 
     public Recommandation() {
@@ -43,10 +23,10 @@ public class Recommandation {
         this.idRec = idRec;
     }
 
-    public Recommandation(Integer idRec, String description, int typeRec, int evenement, int utilisateur) {
+    public Recommandation(Integer idRec, String description, int note, int evenement, int utilisateur) {
         this.idRec = idRec;
         this.description = description;
-        this.typeRec = typeRec;
+        this.note = note;
         this.evenement = evenement;
         this.utilisateur = utilisateur;
     }
@@ -67,12 +47,12 @@ public class Recommandation {
         this.description = description;
     }
 
-    public int getTypeRec() {
-        return typeRec;
+    public int getNote() {
+        return note;
     }
 
-    public void setTypeRec(int typeRec) {
-        this.typeRec = typeRec;
+    public void setNote(int note) {
+        this.note = note;
     }
 
     public int getEvenement() {
@@ -113,9 +93,7 @@ public class Recommandation {
 
     @Override
     public String toString() {
-        return "Recommandation{" + "idRec=" + idRec + ", description=" + description + ", typeRec=" + typeRec + ", evenement=" + evenement + ", utilisateur=" + utilisateur + '}';
+        return "Recommandation{" + "idRec=" + idRec + ", description=" + description + ", Note=" + note + ", evenement=" + evenement + ", utilisateur=" + utilisateur + '}';
     }
 
-   
-    
 }
