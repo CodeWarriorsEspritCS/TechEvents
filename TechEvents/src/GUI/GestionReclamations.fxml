@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6DDCC;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label layoutX="30.0" layoutY="23.0" lineSpacing="5.0" prefHeight="40.0" prefWidth="522.0" text="                        Recommandation d'un événement" textFill="#362f2ff5" textOverrun="CLIP">
+         <font>
+            <Font name="Bodoni MT" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="74.0" prefHeight="17.0" prefWidth="263.0" text="- Quel événement avez vous assisté ?">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="71.0" layoutY="111.0" prefWidth="150.0" style="-fx-background-color: white;" />
+      <Label layoutX="71.0" layoutY="152.0" prefHeight="17.0" prefWidth="296.0" text="-Evaluez votre niveau de satisfaction global :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Slider layoutX="117.0" layoutY="193.0" majorTickUnit="5.0" max="10.0" minorTickCount="2" prefHeight="14.0" prefWidth="180.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label layoutX="63.0" layoutY="185.0" text="Insatisfait" textFill="#c91010" />
+      <Label layoutX="301.0" layoutY="185.0" text="Trés satisfait" textFill="#0f6f04" />
+      <Label layoutX="48.0" layoutY="222.0" prefHeight="17.0" prefWidth="287.0" text="*Ajoutez votre comentaire :" underline="true" />
+      <TextField layoutX="48.0" layoutY="247.0" prefHeight="106.0" prefWidth="272.0" />
+      <Button layoutX="405.0" layoutY="347.0" mnemonicParsing="false" text="Envoyer la réclamation" />
+   </children>
+</AnchorPane>
