@@ -1,4 +1,4 @@
-package controller;
+package Controller;
 
 /**
  * Created by chrischang on 2017. 1. 17..
@@ -6,9 +6,7 @@ package controller;
 
 public class data {
     
-   
-    
-    
+ 
     public static String ip = "localhost";
     public static String name;
     public static int port = 10001;
