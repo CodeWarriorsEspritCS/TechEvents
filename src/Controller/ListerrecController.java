@@ -91,6 +91,8 @@ public class ListerrecController implements Initializable {
     private JFXButton excel;
     @FXML
     private JFXTextField filtr;
+    @FXML
+    private ImageView im;
 
     /**
      * Initializes the controller class.
@@ -223,13 +225,53 @@ public class ListerrecController implements Initializable {
 
     @FXML
     private void chercherparmail(KeyEvent event) {
+        try {
+            RecommandationService us = new RecommandationService();
+            FilteredList <Recommandation> f = new   FilteredList <>(FXCollections.observableArrayList(us.ConsulterRecommandation()),p->true);
+            filtr.textProperty().addListener((observable, oldValue, newValue) -> {
+                f.setPredicate(per->{
+                    
+                    if (newValue==null || newValue.isEmpty())
+                    {      return true;           }
+                    String h =     newValue.toLowerCase();
+                    if (per.getMail().indexOf(h) != -1) {return true ;}
+                    return false ;
+         
+                });
+                SortedList <Recommandation> s = new SortedList<> (f);
+                s.comparatorProperty().bind(table.comparatorProperty());
+                table.setItems(s);
+            });
+        } catch (SQLException ex) {
+            Logger.getLogger(ListerrecController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
+        
+    }
+
+    
+      
+      
+      
+      
+      
+      
+              
+            
+                   
+                  
+               
+      
+               
+               
+               
+               
            
+          
       
                 
         
           
-    }
 }
     
 
