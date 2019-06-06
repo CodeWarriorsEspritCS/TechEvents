@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListerrecController">
    <children>
-      <TableView fx:id="table" layoutX="24.0" layoutY="76.0" prefHeight="249.0" prefWidth="375.0" />
+      <TableView fx:id="table" layoutX="21.0" layoutY="96.0" prefHeight="249.0" prefWidth="375.0" />
       <Pane layoutY="-3.0" prefHeight="63.0" prefWidth="601.0" style="-fx-background-color: #09bab1;">
          <children>
             <Text layoutX="171.0" layoutY="36.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste Des Recommandations" wrappingWidth="363.13671875">
@@ -80,6 +80,11 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXTextField fx:id="filtr" layoutX="226.0" layoutY="355.0" onKeyPressed="#chercherparmail" />
+      <JFXTextField fx:id="filtr" layoutX="117.0" layoutY="61.0" onKeyTyped="#chercherparmail" />
+      <ImageView fx:id="im" fitHeight="27.0" fitWidth="15.0" layoutX="281.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Documents/NetBeansProjects/TechEvents/src/css/Capture.PNG" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
