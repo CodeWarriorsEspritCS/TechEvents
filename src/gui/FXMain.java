@@ -26,7 +26,7 @@ public class FXMain extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root =FXMLLoader.load(getClass().getResource("/GUI/GestionRec.fxml"));
+            Parent root =FXMLLoader.load(getClass().getResource("/gui/MenuPrincipaleWithImageButton.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

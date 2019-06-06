@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="btnrec" prefHeight="445.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ListeventController">
+   <children>
+      <TilePane layoutX="140.0" prefHeight="74.0" prefWidth="484.0" style="-fx-background-color: #2a6972;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/techeventsLogo.png" />
+               </image>
+            </ImageView>
+            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Choissisez l'événement à recommander" wrappingWidth="236.1015625">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#3995a8e5" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="Consolas Bold Italic" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </TilePane>
+      <TableView fx:id="tableevent" layoutX="31.0" layoutY="127.0" prefHeight="259.0" prefWidth="526.0" style="-fx-background-color: #DCF5D0;" />
+      <Button fx:id="butrec" layoutX="489.0" layoutY="400.0" mnemonicParsing="false" onAction="#Gorecommand" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #D3E091;" text="Recommander" />
+      <Pane prefHeight="74.0" prefWidth="140.0" style="-fx-background-color: #2a6972;">
+         <children>
+            <JFXButton fx:id="retour" layoutX="32.0" layoutY="14.0" onAction="#btnhome" prefHeight="53.0" prefWidth="52.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/mshome_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
