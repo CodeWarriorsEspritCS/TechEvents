@@ -190,7 +190,7 @@ public class ListerrecController implements Initializable {
       );
       Statement statement = connect.createStatement();
       ResultSet resultSet = statement
-      .executeQuery("select idRec,description from recommandation");
+      .executeQuery("select idRec,description,Note,mail from recommandation");
      HSSFWorkbook workbook = new HSSFWorkbook(); 
      HSSFSheet spreadsheet = workbook
       .createSheet("recommandation");
@@ -200,8 +200,11 @@ public class ListerrecController implements Initializable {
       cell=row.createCell(1);
       cell.setCellValue("idRec");
       cell=row.createCell(2);
-     
  cell.setCellValue("description");
+   cell=row.createCell(3);
+         cell.setCellValue("Note");
+          cell=row.createCell(4);
+         cell.setCellValue("mail");
 
       int i=2;
       while(resultSet.next())
@@ -211,8 +214,10 @@ public class ListerrecController implements Initializable {
          cell.setCellValue(resultSet.getString("idRec"));
          cell=row.createCell(2);
          cell.setCellValue(resultSet.getString("description"));
-     
-     
+        cell=row.createCell(3);
+         cell.setCellValue(resultSet.getInt("Note"));
+      cell=row.createCell(4);
+         cell.setCellValue(resultSet.getString("mail"));
 
          i++;
       }
