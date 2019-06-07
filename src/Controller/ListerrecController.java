@@ -79,6 +79,7 @@ public class ListerrecController implements Initializable {
       private TableColumn note;
         private TableColumn des;
         private TableColumn ma;
+  
     final    ObservableList<Recommandation>tablef = FXCollections.observableArrayList();
     @FXML
     private JFXButton home;
@@ -91,8 +92,6 @@ public class ListerrecController implements Initializable {
     private JFXButton excel;
     @FXML
     private JFXTextField filtr;
-    @FXML
-    private ImageView im;
 
     /**
      * Initializes the controller class.
@@ -105,15 +104,18 @@ public class ListerrecController implements Initializable {
           note= new TableColumn("Note");
         des= new TableColumn("description");
       ma= new TableColumn("mail");
+
     i.setCellValueFactory(new PropertyValueFactory("idRec"));
           note.setCellValueFactory(new PropertyValueFactory("Note"));
             des.setCellValueFactory(new PropertyValueFactory("description"));
                ma.setCellValueFactory(new PropertyValueFactory("mail"));
+           
           table.getColumns().addAll( i,des,note,ma);
-                 
+                
                  RecommandationService us = new RecommandationService();
         try {
             table.setItems(FXCollections.observableArrayList(us.ConsulterRecommandation()));
+  
         } catch (SQLException ex) {
               Logger.getLogger(Controller.ListerrecController.class.getName()).log(Level.SEVERE, null, ex);
         }
