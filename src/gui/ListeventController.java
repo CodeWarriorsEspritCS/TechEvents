@@ -92,12 +92,16 @@ public class ListeventController implements Initializable {
           try {if ( tableevent.getSelectionModel().getSelectedItem()!=null)
           { StaticVars.currentUser = new Utilisateur(1);
           StaticVars.currentEvent = new Evenement(1);
-              FXMLLoader loader2 = new FXMLLoader(getClass().getResource("/gui/GestionRec.fxml"));
-            Stage stage2 = new Stage(StageStyle.TRANSPARENT);
-            stage2.setScene(new Scene((AnchorPane) loader2.load()));
-          
-    
-            stage2.show();}
+        
+            Parent root;
+              root = FXMLLoader.load(getClass().getResource("GestionRec.fxml"));
+           Scene scene = new Scene(root);
+
+            Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            app_stage.setScene(scene);
+
+            app_stage.show();}
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
