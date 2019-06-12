@@ -48,8 +48,11 @@ import tray.notification.TrayNotification;
 import com.teknikindustries.bulksms.SMS;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javafx.event.EventHandler;
+import javafx.scene.control.Alert.AlertType;
 /**
  * FXML Controller class
  *
@@ -101,21 +104,34 @@ public class GestionRecController implements Initializable {
           
 
    
-    }    
+    } 
+       public boolean validateFields(){
+            if(a.getText().isEmpty() | description.getText().isEmpty() |
+               combo.getValue().isEmpty() 
+                ){
+          Alert alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Validate Fields");
+            alert.setHeaderText(null);
+            alert.setContentText("Veuillez remplir tt les champs");
+            alert.showAndWait(); 
+        }
+        return false;
+        }
 
     @FXML
     private void ConfirmerRec(ActionEvent event) {
       
-        try { 
+        try { UtilisateurService us =new UtilisateurService();
             RecommandationService rest = new RecommandationService();
               Recommandation r = new Recommandation() ;
-         
+       
+        
                 r.setMail(a.getText());
         r.setNote((int) ss.getValue());
       //   r.setIntituler(ess.ChercherEvenementByNom(combo.getValue()));
      
         r.setDescription(description.getText());
-      
+      if (validateEmail() & validateFields()){
            rest.AjouterRecommandation(r);
          
         
@@ -127,7 +143,7 @@ public class GestionRecController implements Initializable {
         tray.setTitle(title);
         tray.setMessage(message);
         tray.setNotificationType(notification);
-        tray.showAndWait();
+        tray.showAndWait();}
         
        /*  Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
        
@@ -150,7 +166,22 @@ public class GestionRecController implements Initializable {
     }
 
  
-
+ public boolean validateEmail(){
+       boolean test = false;
+        String message = "";
+ String masque = "^[a-zA-Z]+[a-zA-Z0-9\\._-]*[a-zA-Z0-9]@[a-zA-Z]+"
+   + "[a-zA-Z0-9\\._-]*[a-zA-Z0-9]+\\.[a-zA-Z]{2,4}$"; 
+         if((!a.getText().equals(masque))||(a.getText().length() == 0)) { 
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Validate Email");
+            alert.setHeaderText(null);
+            alert.setContentText("Please enter valid Email");
+            alert.showAndWait();
+                 return false ;
+        }
+         else {return true ;}
+             };
+    
    
 
   
@@ -159,7 +190,7 @@ public class GestionRecController implements Initializable {
     @FXML
     private void SendSMS(ActionEvent event) {
      SMS msg = new SMS();
-     msg.SendSMS("oumayma", "tunisie2016", "Félicitation ! sore9 var  !!", "+21696808871", "https://bulksms.vsms.net/eapi/submission/send_sms/2/2.0");
+     msg.SendSMS("oumayma", "tunisie2016", "votre recommandation a été enregistrée ", "+21692839149", "https://bulksms.vsms.net/eapi/submission/send_sms/2/2.0");
    
     
     
