@@ -12,28 +12,6 @@
 
 <AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionRecController">
    <children>
-      <TilePane layoutX="-7.0" prefHeight="76.0" prefWidth="740.0" style="-fx-background-color: #2a6972;">
-         <children>
-            <ImageView fitHeight="69.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/techeventsLogo.png" />
-               </image>
-            </ImageView>
-            <Label alignment="CENTER_RIGHT" contentDisplay="BOTTOM" prefHeight="60.0" prefWidth="362.0" text="Recommandation d'un évenement">
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop color="#1a8659" />
-                        <Stop color="#8fe4dd" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <font>
-                  <Font name="System Bold Italic" size="15.0" />
-               </font>
-            </Label>
-         </children>
-      </TilePane>
       <Pane layoutY="653.0" prefHeight="37.0" prefWidth="729.0" style="-fx-background-color: #2a6972;">
          <children>
             <Text fill="#e99b06" layoutX="464.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code">
@@ -48,7 +26,7 @@
             </Text>
          </children>
       </Pane>
-      <Label layoutX="10.0" layoutY="298.0" prefHeight="31.0" prefWidth="472.0" text="-Donner votre évaluation de votre événement :">
+      <Label layoutX="20.0" layoutY="200.0" prefHeight="31.0" prefWidth="472.0" text="-Donner votre évaluation de votre événement :">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font>
@@ -61,17 +39,17 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="4.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="7.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../css/001-suspicious.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="37.0" fitWidth="28.0" layoutX="426.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="37.0" fitWidth="28.0" layoutX="426.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../css/004-in-love.png" />
          </image>
       </ImageView>
-      <Label layoutX="28.0" layoutY="403.0" prefHeight="17.0" prefWidth="287.0" text="-Ajouter  votre description :">
+      <Label layoutX="34.0" layoutY="315.0" prefHeight="17.0" prefWidth="287.0" text="-Ajouter  votre description :">
          <textFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -84,33 +62,16 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextArea fx:id="description" layoutX="34.0" layoutY="454.0" prefHeight="173.0" prefWidth="354.0" style="-fx-background-color: #A9E8D1;" />
+      <TextArea fx:id="description" layoutX="35.0" layoutY="358.0" prefHeight="173.0" prefWidth="354.0" style="-fx-background-color: #A9E8D1;" />
       <Button fx:id="ConfirmerRec" layoutX="519.0" layoutY="406.0" mnemonicParsing="false" onAction="#ConfirmerRec" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #A9E8D1;" text="Confirmer" />
-      <Button fx:id="annuler" layoutX="519.0" layoutY="506.0" mnemonicParsing="false" onAction="#AnnulerRec" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #A9E8D1;" text="Annuler" />
-      <JFXTextField id="Username" fx:id="a" focusColor="#768045" layoutX="105.0" layoutY="162.0" prefHeight="35.0" prefWidth="225.0" promptText="Username" text="e-mail">
-         <unFocusColor>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop color="BLACK" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </unFocusColor></JFXTextField>
-      <JFXSlider fx:id="ss" blockIncrement="1.0" indicatorPosition="RIGHT" layoutX="34.0" layoutY="358.0" majorTickUnit="1.0" max="5.0" opacity="0.61" prefHeight="14.0" prefWidth="379.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
-      <JFXButton fx:id="buttonsms" layoutX="454.0" layoutY="454.0" onAction="#SendSMS" prefHeight="35.0" prefWidth="219.0" style="-fx-background-color: #A9E8D1;" text="Recevoir confirmation par SMS">
-         <graphic>
-            <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../css/sms.PNG" />
-               </image>
-            </ImageView>
-         </graphic></JFXButton>
-      <ImageView fitHeight="132.0" fitWidth="117.0" layoutX="602.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="annuler" layoutX="519.0" layoutY="463.0" mnemonicParsing="false" onAction="#AnnulerRec" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #A9E8D1;" text="Annuler" />
+      <JFXSlider fx:id="ss" blockIncrement="1.0" indicatorPosition="RIGHT" layoutX="47.0" layoutY="266.0" majorTickUnit="1.0" max="5.0" opacity="0.61" prefHeight="14.0" prefWidth="379.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <ImageView fitHeight="132.0" fitWidth="117.0" layoutX="617.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../css/manage.png" />
          </image>
       </ImageView>
-      <Label layoutX="22.0" layoutY="209.0" prefHeight="32.0" prefWidth="379.0" text="-Quel Evénement avez vous assisté:">
+      <Label layoutX="23.0" layoutY="122.0" prefHeight="32.0" prefWidth="379.0" text="-Quel Evénement avez vous assisté:">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
@@ -123,20 +84,47 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <ComboBox fx:id="combo" layoutX="97.0" layoutY="260.0" prefWidth="150.0" style="-fx-background-color: #A9E8D1;" />
-      <Label layoutX="28.0" layoutY="112.0" prefHeight="32.0" prefWidth="256.0" text="-Ajouter votre e-mail :">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop color="#1a8659" />
-                  <Stop color="#753535" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
+      <ComboBox fx:id="combo" layoutX="115.0" layoutY="158.0" prefWidth="150.0" style="-fx-background-color: #A9E8D1;" />
+      <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="89.0" prefWidth="729.0" style="-fx-background-color: #09bab1;">
+         <children>
+            <Text layoutX="171.0" layoutY="36.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Votre Recommandation" wrappingWidth="363.13671875">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#453806" />
+                        <Stop color="#cc9bb6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="56.0" fitWidth="76.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/techeventsLogo.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="home" layoutX="581.0" layoutY="13.0" onAction="#Gomenuu" prefHeight="36.0" prefWidth="95.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../css/mshome_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton fx:id="bc" layoutX="14.0" layoutY="579.0" onAction="#gobakc">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../css/b.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
    </children>
  
 </AnchorPane>
