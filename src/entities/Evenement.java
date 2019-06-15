@@ -237,7 +237,6 @@ public class Evenement {
 
     @Override
     public String toString() {
-        return "Evenement{" + "idEvent=" + idEvent + ", debutEvent=" + debutEvent + ", finEvent=" + finEvent + ", intitule=" + intitule + ", nombrePlaceMax=" + nombrePlaceMax + ", prix=" + prix + ", descriptionEvent=" + descriptionEvent + ", categorie=" + categorie + ", organisateur=" + organisateur + ", localisation=" + localisation + ", adresseEven=" + adresseEven + '}';
-    }
+        return  intitule;}
 
 }
