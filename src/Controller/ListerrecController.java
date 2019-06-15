@@ -78,8 +78,9 @@ public class ListerrecController implements Initializable {
             private TableColumn i;
       private TableColumn note;
         private TableColumn des;
-        private TableColumn ma;
-  
+     
+            private TableColumn ev;
+   private TableColumn idd;
     final    ObservableList<Recommandation>tablef = FXCollections.observableArrayList();
     @FXML
     private JFXButton home;
@@ -99,18 +100,19 @@ public class ListerrecController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+       
         i= new TableColumn("idrec");
       
           note= new TableColumn("Note");
         des= new TableColumn("description");
-      ma= new TableColumn("mail");
-
+      ev= new TableColumn("nom");
+     
     i.setCellValueFactory(new PropertyValueFactory("idRec"));
           note.setCellValueFactory(new PropertyValueFactory("Note"));
             des.setCellValueFactory(new PropertyValueFactory("description"));
-               ma.setCellValueFactory(new PropertyValueFactory("mail"));
-           
-          table.getColumns().addAll( i,des,note,ma);
+               ev.setCellValueFactory(new PropertyValueFactory("Intituler"));
+        
+        table.getColumns().addAll(i,note,des,ev);
                 
                  RecommandationService us = new RecommandationService();
         try {
@@ -190,7 +192,7 @@ public class ListerrecController implements Initializable {
       );
       Statement statement = connect.createStatement();
       ResultSet resultSet = statement
-      .executeQuery("select idRec,description,Note,mail from recommandation");
+      .executeQuery("select idRec,description,Note from recommandation");
      HSSFWorkbook workbook = new HSSFWorkbook(); 
      HSSFSheet spreadsheet = workbook
       .createSheet("recommandation");
@@ -203,9 +205,7 @@ public class ListerrecController implements Initializable {
  cell.setCellValue("description");
    cell=row.createCell(3);
          cell.setCellValue("Note");
-          cell=row.createCell(4);
-         cell.setCellValue("mail");
-
+          
       int i=2;
       while(resultSet.next())
       {
@@ -216,9 +216,7 @@ public class ListerrecController implements Initializable {
          cell.setCellValue(resultSet.getString("description"));
         cell=row.createCell(3);
          cell.setCellValue(resultSet.getInt("Note"));
-      cell=row.createCell(4);
-         cell.setCellValue(resultSet.getString("mail"));
-
+     
          i++;
       }
       FileOutputStream out = new FileOutputStream(
@@ -231,7 +229,7 @@ public class ListerrecController implements Initializable {
      }
 
     @FXML
-    private void chercherparmail(KeyEvent event) {
+    private void chercherpardes(KeyEvent event) {
         try {
             RecommandationService us = new RecommandationService();
             FilteredList <Recommandation> f = new   FilteredList <>(FXCollections.observableArrayList(us.ConsulterRecommandation()),p->true);
@@ -241,7 +239,7 @@ public class ListerrecController implements Initializable {
                     if (newValue==null || newValue.isEmpty())
                     {      return true;           }
                     String h =     newValue.toLowerCase();
-                    if (per.getMail().indexOf(h) != -1) {return true ;}
+                    if (per.getDescription().indexOf(h) != -1) {return true ;}
                     return false ;
          
                 });
