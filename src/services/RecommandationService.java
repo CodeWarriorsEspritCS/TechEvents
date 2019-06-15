@@ -36,7 +36,7 @@ public class RecommandationService implements IRecommandationService {
 
     @Override
     public void AjouterRecommandation(Recommandation e) throws SQLException {
-        PreparedStatement pst = cnx.prepareStatement("INSERT INTO `recommandation` (`idRec`, `description`, `Note`, `id-event`,`idUser`) VALUES (NULL, ?, ?,?,?)");
+        PreparedStatement pst = cnx.prepareStatement("INSERT INTO `recommandation` (`idRec`, `description`, `Note`, `id_event`,`idUser`) VALUES (NULL, ?, ?,?,?)");
         ;
 
         pst.setString(1, e.getDescription());
@@ -69,7 +69,7 @@ public class RecommandationService implements IRecommandationService {
     @Override
     public ArrayList<Recommandation> ConsulterRecommandation() throws SQLException {
 
-        PreparedStatement pst = cnx.prepareStatement("select *  from recommandation  ");
+        PreparedStatement pst = cnx.prepareStatement("SELECT r.idRec,r.Note,r.description,e.intitule FROM recommandation r , evenement e where r.id_event= e.id_event");
         System.out.println(pst);
         ResultSet rst = pst.executeQuery();
 
@@ -81,9 +81,12 @@ public class RecommandationService implements IRecommandationService {
             int id = rst.getInt(1);
             String p1 = rst.getString(3);
             int not = rst.getInt(2);
-            Evenement idEvent = i.ChercherEvenementByNom(rst.getInt(4));
+            String nm =rst.getString(4);
+         //   System.out.println(nm);
+            
+           // Evenement idEvent = i.ChercherEvenementByNom(rst.getInt(4));
            
-            u = new Recommandation(id, p1, not,idEvent);
+            u = new Recommandation(id, p1, not,nm);
 
             listeTable.add(u);
 
