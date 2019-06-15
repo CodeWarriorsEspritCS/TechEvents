@@ -1,8 +1,5 @@
 package Controller;
 
-/**
- * Created by chrischang on 2017. 1. 17..
- */
 
 public class data {
     

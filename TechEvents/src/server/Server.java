@@ -36,7 +36,7 @@ public class Server {
                 thread.start();
             }
         } catch(IOException e) {
-            System.out.println("Conncetion Failed");
+            System.out.println("Starting Server Failed");
         } finally {
             SocketUtil.close(serverSocket);
         }
@@ -83,7 +83,7 @@ public class Server {
             String name = "Unknown";
             try {
                 name = dis.readUTF();
-                broadCast(name + " : Connected");
+                broadCast(name + " : Is online");
                 clients.put(name, dos);
                 System.out.println("Current User : " + clients.size());
 
@@ -94,7 +94,7 @@ public class Server {
                 System.out.println("Read Failed");
             } finally {
                 //it means client has disconnected
-                broadCast(name + " : Disconnected");
+                broadCast(name + " : Has disconnected");
                 clients.remove(name);
                 System.out.println("[" + socket.getInetAddress() //
                         + ":" + socket.getPort() + "]" + "에서 접속을 종료하였습니다.");
