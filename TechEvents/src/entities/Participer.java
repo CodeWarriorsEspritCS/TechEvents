@@ -1,27 +1,56 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entities;
-
-import java.util.ArrayList;
 
 /**
  *
  * @author Linda
  */
-public class Participer {
+  
+public class Participer  {
 
     private int idPart;
-    private ArrayList<Evenement> idEvent;
-    private ArrayList<Utilisateur> idUtilisateur;
+    
+    private int idEvent;
+    
+    private int idUtilisateur;
+    
     private int nbParticipant;
 
-    public Participer(ArrayList<Evenement> idEvent, ArrayList<Utilisateur> idUtilisateur, int nbParticipant) {
+    public Participer() {
+    }
+
+    public Participer(int idPart) {
+        this.idPart = idPart;
+    }
+
+    public Participer(int idPart, int idEvent, int idUtilisateur, int nbParticipant) {
+        this.idPart = idPart;
         this.idEvent = idEvent;
         this.idUtilisateur = idUtilisateur;
         this.nbParticipant = nbParticipant;
+    }
+
+    public int getIdPart() {
+        return idPart;
+    }
+
+    public void setIdPart(int idPart) {
+        this.idPart = idPart;
+    }
+
+    public int getIdEvent() {
+        return idEvent;
+    }
+
+    public void setIdEvent(int idEvent) {
+        this.idEvent = idEvent;
+    }
+
+    public int getIdUtilisateur() {
+        return idUtilisateur;
+    }
+
+    public void setIdUtilisateur(int idUtilisateur) {
+        this.idUtilisateur = idUtilisateur;
     }
 
     public int getNbParticipant() {
@@ -32,5 +61,10 @@ public class Participer {
         this.nbParticipant = nbParticipant;
     }
 
+   
+    @Override
+    public String toString() {
+        return "entities.Participer_1[ idPart=" + idPart + " ]";
+    }
     
 }
